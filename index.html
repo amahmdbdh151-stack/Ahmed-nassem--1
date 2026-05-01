@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عناية - المتجر الفاخر</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS الملف المنفصل -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo-section">
+                <div class="logo-icon">ع</div>
+                <div class="logo-text">عناية</div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="nav-links">
+                <button class="home-btn" onclick="openHomeModal()">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/%3E%3C/svg%3E"
+                        alt="home" class="home-logo-img">
+                    الرئيسية
+                </button>
+                <a href="#products">المنتجات</a>
+                <a href="#about">عن المتجر</a>
+                <a href="#contact">تواصل معنا</a>
+                <div class="cart-icon" onclick="viewCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                    <div id="cart-sidebar" class="cart-sidebar">
+                        <div class="cart-header">
+                            <h3>سلة المشتريات</h3>
+                            <button id="close-cart">X</button>
+                        </div>
+                        <div id="cart-items-container">
+                        </div>
+                        <div class="cart-footer">
+                            <button>إتمام الشراء</button>
+                            <button onclick="goToHome()" class="back-btn">رجوع</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Modal -->
+    <div id="homeModal" class="home-modal">
+        <div class="home-modal-content">
+            <div class="home-modal-header">
+                <h2 class="home-modal-title">مرحباً بك في عناية</h2>
+                <button class="close-btn" onclick="closeHomeModal()">&times;</button>
+            </div>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%231a7f7e'%3E%3Ccircle cx='50' cy='35' r='20'/%3E%3Cpath d='M30 55 Q30 65 50 75 Q70 65 70 55 Z' fill='%231a7f7e'/%3E%3C/svg%3E"
+                alt="وجه الكابتن" class="home-logo-display">
+            <div class="home-welcome-text">
+                <p>أهلاً وسهلاً بك في متجر <strong>عناية</strong> الفاخر</p>
+                <p>نقدم لك أفضل المنتجات الفاخرة والعالية الجودة</p>
+                <p>استمتع بتجربة تسوق مميزة مع أسعار حصرية وخدمة عملاء متميزة</p>
+            </div>
+            <div class="home-modal-footer">
+                <p>🌟 اكتشف مجموعتنا الحصرية من المنتجات الفاخرة 🌟</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="page-title">منتجاتنا الفاخرة</h1>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- المنتجات سيتم إضافتها هنا -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 عناية - متجر فاخر. جميع الحقوق محفوظة.</p>
+        <p>تواصل معنا: info@enaya.com | الهاتف: +966 50 123 4567</p>
+    </footer>
+
+    <!-- JS الملف المنفصل -->
+    <script src="script.js"></script>
+</body>
+
+</html>
